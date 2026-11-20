@@ -1,0 +1,11 @@
+.venv/
+tmp/
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.nox/
+.coverage
+# user-owned limits never live in the repo
+guardrails.yaml

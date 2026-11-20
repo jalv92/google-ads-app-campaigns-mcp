@@ -1,0 +1,14 @@
+[
+  "app_campaigns_create_app_campaign",
+  "app_campaigns_set_campaign_status",
+  "app_campaigns_set_campaign_targeting",
+  "app_campaigns_set_target_cost",
+  "app_campaigns_update_app_ad",
+  "assets_create_asset",
+  "assets_upload_video_asset",
+  "customers_list_accessible_customers",
+  "labels_manage_label_associations",
+  "labels_manage_labels",
+  "metadata_get_resource_metadata",
+  "search_search"
+]

@@ -1,0 +1,7 @@
+google-ads-app-campaigns-mcp
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project builds on googleads/google-ads-mcp (Apache-2.0,
+Copyright Google LLC), which it installs as a dependency and extends.
+
+It is not affiliated with or endorsed by Google.

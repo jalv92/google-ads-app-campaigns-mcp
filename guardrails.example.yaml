@@ -1,0 +1,24 @@
+# Target-cost guardrails. Copy this file OUTSIDE any repository, edit it, and
+# point GOOGLE_ADS_APP_MCP_GUARDRAILS at it. Never commit your real copy.
+# Values are in account currency units (not micros). The file is re-read on
+# every call, so edits apply to the next run. Anything missing or invalid
+# makes the server refuse the change.
+customers:
+  "1234567890":              # Google Ads customer ID, digits only
+    defaults:                # used when a campaign has no entry below
+      install:               # campaigns that optimise for installs
+        min: 0.80            # lowest target cost the agent may set
+        max: 1.50            # highest target cost the agent may set
+        max_step_pct: 20     # largest single change, percent of current target (greater than 0, at most 100)
+        min_days_between_changes: 3   # wait at least this many days (0-28)
+      action:                # campaigns that optimise for in-app actions
+        min: 2.00
+        max: 6.00
+        max_step_pct: 20
+        min_days_between_changes: 3
+    campaigns:               # optional per-campaign override (all four keys required)
+      "111":
+        min: 0.90
+        max: 1.20
+        max_step_pct: 15
+        min_days_between_changes: 5

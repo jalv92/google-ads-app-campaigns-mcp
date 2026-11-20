@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "google-ads-app-campaigns-mcp"
+version = "0.1.0"
+description = "App campaign management tools mounted on Google's official Google Ads MCP server"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = ["google-ads-mcp==0.0.6", "pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "black"]
+
+[project.scripts]
+google-ads-app-campaigns-mcp = "ads_app_mcp.server:run_server"
+
+[tool.setuptools]
+packages = ["ads_app_mcp", "ads_app_mcp.tools"]
+
+[tool.setuptools.package-data]
+ads_app_mcp = ["playbook.md"]
